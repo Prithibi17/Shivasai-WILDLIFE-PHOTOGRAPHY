@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Shivasai Thammala | Wildlife Photography</title>
+<meta name="description" content="Award-winning wildlife photographer based in Telangana, India. Capturing stories that belong to nature."/>
+<meta name="keywords" content="wildlife photography, nature photographer, India, birds, mammals, landscape"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Oswald:wght@200;300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.cdnfonts.com/css/slice" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/nothing" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/chopin-script" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-follower" id="cursorFollower"></div>
+
+<!-- Scroll Progress -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Page Loader -->
+<div class="page-loader" id="pageLoader">
+  <div class="loader-content">
+    <div class="loader-logo">ST</div>
+    <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+    <p class="loader-text">Loading Experience...</p>
+  </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="#" class="nav-logo" id="navLogo">
+      <span class="logo-text">Shivasai</span>
+      <span class="logo-sub">WILDLIFE PHOTOGRAPHY</span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#portfolio" class="nav-link">Work</a></li>
+      <li><a href="#stories" class="nav-link">Stories</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="#contact" class="nav-cta">Let's Connect</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-inner">
+    <a href="#home" class="mobile-link">Home</a>
+    <a href="#portfolio" class="mobile-link">Work</a>
+    <a href="#stories" class="mobile-link">Stories</a>
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+</div>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <img src="hero_wildlife.png" alt="Hero wildlife" class="hero-img" id="heroImg"/>
+    <div class="hero-overlay"></div>
+    <div class="hero-grain"></div>
+    <div class="hero-glow"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <p class="hero-tag reveal-text">Travel. Nature. Wildlife.</p>
+      <h1 class="hero-title">
+        <span class="reveal-line">Capturing</span>
+        <span class="reveal-line">Stories That</span>
+        <span class="reveal-line">Belong To</span>
+        <span class="reveal-line accent-word">Nature.</span>
+      </h1>
+      <p class="hero-desc reveal-text">I'm Shivasai Thammala, a travel, nature &amp; wildlife photographer based in Telangana, India.</p>
+      <div class="hero-actions reveal-text">
+        <a href="#portfolio" class="btn btn-primary">Explore Portfolio →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Section -->
+<section class="portfolio" id="portfolio">
+  <div class="section-header">
+    <p class="section-tag">My Work</p>
+    <h2 class="section-title">Frame by Frame,<br/><em>Story by Story</em></h2>
+  </div>
+  <div class="portfolio-filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="birds">Birds</button>
+    <button class="filter-btn" data-filter="mammals">Mammals</button>
+    <button class="filter-btn" data-filter="landscape">Landscape</button>
+    <button class="filter-btn" data-filter="macro">Macro</button>
+    <button class="filter-btn" data-filter="adventure">Adventure</button>
+  </div>
+  <div class="bento-grid" id="bentoGrid">
+    <div class="bento-item bento-large" data-category="birds" data-img="portfolio_birds.png" data-title="Kingfisher Dive" data-location="Telangana, India">
+      <img src="portfolio_birds.png" alt="Kingfisher diving" loading="lazy"/>
+      <div class="bento-overlay">
+        <div class="bento-info">
+          <span class="bento-cat">Birds</span>
+          <h3>Kingfisher Dive</h3>
+          <p>Explore →</p>
+        </div>
+      </div>
+    </div>
+    <div class="bento-item bento-medium" data-category="mammals" data-img="portfolio_mammals.png" data-title="Lion King" data-location="Savannah, Africa">
+      <img src="portfolio_mammals.png" alt="Lion portrait" loading="lazy"/>
+      <div class="bento-overlay">
+        <div class="bento-info">
+          <span class="bento-cat">Mammals</span>
+          <h3>Lion King</h3>
+          <p>Explore →</p>
+        </div>
+      </div>
+    </div>
+    <div class="bento-item bento-tall" data-category="landscape" data-img="portfolio_landscape.png" data-title="Misty Mountains" data-location="Himalayas, India">
+      <img src="portfolio_landscape.png" alt="Mountain landscape" loading="lazy"/>
+      <div class="bento-overlay">
+        <div class="bento-info">
+          <span class="bento-cat">Landscape</span>
+          <h3>Misty Mountains</h3>
+          <p>Explore →</p>
+        </div>
+      </div>
+    </div>
+    <div class="bento-item bento-small" data-category="macro" data-img="portfolio_macro.png" data-title="Monarch Wings" data-location="Western Ghats">
+      <img src="portfolio_macro.png" alt="Butterfly macro" loading="lazy"/>
+      <div class="bento-overlay">
+        <div class="bento-info">
+          <span class="bento-cat">Macro</span>
+          <h3>Monarch Wings</h3>
+          <p>Explore →</p>
+        </div>
+      </div>
+    </div>
+    <div class="bento-item bento-wide" data-category="adventure" data-img="portfolio_adventure.png" data-title="Summit Light" data-location="Ladakh, India">
+      <img src="portfolio_adventure.png" alt="Adventure photography" loading="lazy"/>
+      <div class="bento-overlay">
+        <div class="bento-info">
+          <span class="bento-cat">Adventure</span>
+          <h3>Summit Light</h3>
+          <p>Explore →</p>
+        </div>
+      </div>
+    </div>
+    <div class="bento-item bento-medium" data-category="mammals" data-img="portfolio_tiger.png" data-title="Eyes of the Wild" data-location="Bandipur, India">
+      <img src="portfolio_tiger.png" alt="Tiger portrait" loading="lazy"/>
+      <div class="bento-overlay">
+        <div class="bento-info">
+          <span class="bento-cat">Mammals</span>
+          <h3>Eyes of the Wild</h3>
+          <p>Explore →</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+  <div class="about-container">
+    <div class="about-image-col">
+      <div class="about-img-wrap">
+        <img src="about_photographer.png" alt="Shivasai Thammala" loading="lazy"/>
+        <div class="about-signature">Shivasai</div>
+        <div class="about-img-accent"></div>
+      </div>
+    </div>
+    <div class="about-content-col">
+      <p class="section-tag">About Me</p>
+      <h2 class="about-title">Driven by Passion.<br/><em>Guided by <span class="accent">Nature.</span></em></h2>
+      <p class="about-desc">Wildlife photography is more than my profession — it's my way of honoring the planet and its inhabitants. I believe in ethical storytelling, conservation, and inspiring a deeper connection with nature.</p>
+      <a href="#" class="btn btn-outline">Read My Story →</a>
+      <div class="about-features">
+        <div class="feature-card">
+          <div class="feature-icon"></div>
+          <div>
+            <h4>Conservation Focused</h4>
+            <p>Supporting wildlife conservation and habitat protection.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"></div>
+          <div>
+            <h4>Ethical Approach</h4>
+            <p>I follow ethical practices to ensure minimal disturbance.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"></div>
+          <div>
+            <h4>Field Experience</h4>
+            <p>Years of exploration across diverse ecosystems.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"></div>
+          <div>
+            <h4>Storyteller</h4>
+            <p>Every frame tells a story that shapes and connects.</p>
+          </div>
+        </div>
+      </div>
+      <div class="stats-row">
+        <div class="stat-item">
+          <span class="stat-num" data-target="10">0</span><span class="stat-plus">+</span>
+          <p>Years Experience</p>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="25">0</span><span class="stat-plus">+</span>
+          <p>Countries Explored</p>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="500">0</span><span class="stat-plus">+</span>
+          <p>Projects Completed</p>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="100">0</span><span class="stat-plus">+</span>
+          <p>Happy Clients</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Stories -->
+<section class="stories" id="stories">
+  <div class="stories-header">
+    <div>
+      <p class="section-tag">Field Journal</p>
+      <h2 class="section-title">Featured <em>Stories</em></h2>
+    </div>
+    <a href="#" class="view-all">View All Stories →</a>
+  </div>
+  <div class="stories-grid">
+    <article class="story-card" data-href="#">
+      <div class="story-img">
+        <img src="story_bear.png" alt="The Silent Wanderer" loading="lazy"/>
+        <span class="story-badge">Field Journal</span>
+      </div>
+      <div class="story-body">
+        <h3>The Silent Wanderer</h3>
+        <time>May 12, 2024</time>
+        <a href="#" class="story-arrow">→</a>
+      </div>
+    </article>
+    <article class="story-card" data-href="#">
+      <div class="story-img">
+        <img src="story_deer.png" alt="Through the Mist" loading="lazy"/>
+        <span class="story-badge">Expedition</span>
+      </div>
+      <div class="story-body">
+        <h3>Through the Mist</h3>
+        <time>Apr 28, 2024</time>
+        <a href="#" class="story-arrow">→</a>
+      </div>
+    </article>
+    <article class="story-card" data-href="#">
+      <div class="story-img">
+        <img src="portfolio_tiger.png" alt="Eyes of the Wild" loading="lazy"/>
+        <span class="story-badge">Wildlife Diary</span>
+      </div>
+      <div class="story-body">
+        <h3>Eyes of the Wild</h3>
+        <time>Apr 18, 2024</time>
+        <a href="#" class="story-arrow">→</a>
+      </div>
+    </article>
+    <article class="story-card" data-href="#">
+      <div class="story-img">
+        <img src="portfolio_landscape.png" alt="Highlands Calling" loading="lazy"/>
+        <span class="story-badge">Travel Diary</span>
+      </div>
+      <div class="story-body">
+        <h3>Highlands Calling</h3>
+        <time>Mar 22, 2024</time>
+        <a href="#" class="story-arrow">→</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- Footer / Contact -->
+<footer class="footer" id="contact">
+  <div class="footer-top">
+    <div class="footer-col footer-brand">
+      <div class="footer-logo">Shivasai Thammala</div>
+      <p>Get stories, updates and behind-the-scenes moments from the wild.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Enter your email" id="newsletterEmail"/>
+        <button type="submit" aria-label="Subscribe">→</button>
+      </form>
+      <div class="footer-socials">
+        <a href="#" aria-label="Instagram" class="footer-social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="#" aria-label="YouTube" class="footer-social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#portfolio">Work</a></li>
+        <li><a href="#stories">Stories</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">Wildlife Photography</a></li>
+        <li><a href="#">Nature Photography</a></li>
+        <li><a href="#">Videography</a></li>
+        <li><a href="#">Workshops</a></li>
+        <li><a href="#">Expeditions</a></li>
+        <li><a href="#">Commercial</a></li>
+      </ul>
+    </div>
+    <div class="footer-col footer-contact-col">
+      <h4>Let's Connect</h4>
+      <p>Have a project in mind? I'd love to hear from you.</p>
+      <div class="contact-details">
+        <a href="mailto:hello@shivasaithammala.com">hello@shivasaithammala.com</a>
+        <a href="tel:+91XXXXXXXXXX">+91 XXXXXXXXXX</a>
+      </div>
+      <div class="location-badge">
+        <span></span>
+        <div>
+          <strong>Based in Telangana, India</strong>
+          <small>Available for assignments worldwide.</small>
+        </div>
+      </div>
+      <a href="#contact" class="btn btn-gold">Let's Work Together →</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Shivasai Thammala. All rights reserved.</p>
+    <div class="footer-bottom-links">
+      <span>Developed by Prithibi Mandi</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">✕</button>
+  <button class="lightbox-nav lightbox-prev" id="lightboxPrev">‹</button>
+  <button class="lightbox-nav lightbox-next" id="lightboxNext">›</button>
+  <div class="lightbox-content">
+    <img src="" alt="" id="lightboxImg"/>
+    <div class="lightbox-caption">
+      <h3 id="lightboxTitle"></h3>
+      <p id="lightboxLocation"></p>
+    </div>
+  </div>
+</div>
+
+<script src="scripts.js" defer></script>
+</body>
+</html>
