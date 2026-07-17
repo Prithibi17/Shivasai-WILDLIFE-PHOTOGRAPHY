@@ -1,0 +1,37 @@
+[
+  {
+    "title": "hornbill",
+    "url": "gallery/birds/hornbill.png",
+    "category": "birds"
+  },
+  {
+    "title": "kingfisher",
+    "url": "gallery/birds/kingfisher.png",
+    "category": "birds"
+  },
+  {
+    "title": "bear",
+    "url": "gallery/mammals/bear.png",
+    "category": "mammals"
+  },
+  {
+    "title": "deer",
+    "url": "gallery/mammals/deer.png",
+    "category": "mammals"
+  },
+  {
+    "title": "tiger",
+    "url": "gallery/mammals/tiger.png",
+    "category": "mammals"
+  },
+  {
+    "title": "lizard",
+    "url": "gallery/reptiles/lizard.png",
+    "category": "reptiles"
+  },
+  {
+    "title": "turtle",
+    "url": "gallery/reptiles/turtle.png",
+    "category": "reptiles"
+  }
+]
