@@ -25,28 +25,46 @@ document.addEventListener('DOMContentLoaded', () => {
   const masonryItems = document.querySelectorAll('.masonry-item');
   const heroImg = document.getElementById('heroImg');
 
-  // 1. SIMULATE LOADING EXPERIENCE
+  // 1. ACTUAL LOADING EXPERIENCE
+  const images = document.querySelectorAll('img');
+  const totalImages = images.length;
+  let loadedImages = 0;
   let progress = 0;
-  const loadingInterval = setInterval(() => {
-    progress += Math.floor(Math.random() * 15) + 5;
-    if (progress >= 100) {
-      progress = 100;
-      clearInterval(loadingInterval);
-      
-      // Complete fill and hide loader
-      if (loaderFill) loaderFill.style.width = '100%';
-      setTimeout(() => {
-        if (loader) {
-          loader.style.opacity = '0';
-          loader.style.visibility = 'hidden';
-        }
-        // Start any entrance animations if desired
-        animateHero();
-      }, 500);
-    } else {
-      if (loaderFill) loaderFill.style.width = `${progress}%`;
+
+  function finishLoading() {
+    if (loaderFill) loaderFill.style.width = '100%';
+    setTimeout(() => {
+      if (loader) {
+        loader.style.opacity = '0';
+        loader.style.visibility = 'hidden';
+      }
+      // Start any entrance animations if desired
+      animateHero();
+    }, 500);
+  }
+
+  function updateProgress() {
+    loadedImages++;
+    progress = totalImages === 0 ? 100 : Math.floor((loadedImages / totalImages) * 100);
+    if (loaderFill) loaderFill.style.width = `${progress}%`;
+    
+    if (loadedImages >= totalImages) {
+      finishLoading();
     }
-  }, 80);
+  }
+
+  if (totalImages === 0) {
+    finishLoading();
+  } else {
+    images.forEach(img => {
+      if (img.complete) {
+        updateProgress();
+      } else {
+        img.addEventListener('load', updateProgress);
+        img.addEventListener('error', updateProgress);
+      }
+    });
+  }
 
 
   // 2. HERO PARALLAX & ENTRANCE ANIMATIONS
