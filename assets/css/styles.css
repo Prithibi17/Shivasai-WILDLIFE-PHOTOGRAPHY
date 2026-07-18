@@ -680,6 +680,7 @@ em, i {
 
 /* Cinematic Section Transitions */
 .cinematic-transition {
+  display: none;
   position: absolute;
   bottom: -110px; /* Overlap 60% top, 40% bottom roughly if height is 220px */
   left: 0;
@@ -776,7 +777,7 @@ em, i {
    MY WORK / PORTFOLIO
 ----------------------------------------- */
 .portfolio {
-  padding: 140px 0;
+  padding: 60px 0 140px 0;
   background-color: transparent;
   position: relative;
 }
